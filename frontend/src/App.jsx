@@ -13,7 +13,7 @@ function App() {
   const handleVerification = async (text) => {
     setLoading(true);
     try {
-      // Use absolute URL to backend API without proxy
+      
       const response = await axios.post(`${BACKEND}/api/verify`, { text });
       setVerificationResult(response.data);
     } catch (error) {
