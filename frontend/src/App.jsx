@@ -4,7 +4,7 @@ import { AlertTriangle, CheckCircle, TrendingUp, Users } from 'lucide-react';
 import VerificationForm from './components/VerificationForm';
 import Dashboard from './components/Dashboard';
 import ResultDisplay from './components/ResultDisplay';
-const BACKEND = process.env.VITE_BACKEND_URL || 'http://localhost:8000';
+const BACKEND = 'https://trinetra-ai-bend.onrender.com';
 function App() {
   const [activeTab, setActiveTab] = useState('verify');
   const [verificationResult, setVerificationResult] = useState(null);
@@ -110,14 +110,6 @@ function App() {
         )}
       </main>
 
-      {/* Footer */}
-      <footer className="bg-white border-t mt-16">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
-          <div className="text-center text-gray-600">
-            <p>&copy; 2024 Misinformation Detection App. Built for information integrity.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
