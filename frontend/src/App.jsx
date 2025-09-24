@@ -47,6 +47,7 @@ function App() {
               >
                 Verify Text
               </button>
+{/*
               <button
                 onClick={() => setActiveTab('dashboard')}
                 className={`px-4 py-2 rounded-lg font-medium transition-colors ${
@@ -55,6 +56,7 @@ function App() {
               >
                 Dashboard
               </button>
+*/}
             </nav>
           </div>
         </div>
