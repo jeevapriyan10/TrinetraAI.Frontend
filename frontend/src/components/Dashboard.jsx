@@ -11,11 +11,11 @@ const Dashboard = () => {
   useEffect(() => {
     fetchDashboardData();
   }, []);
-  const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+  const BACKEND = process.env.VITE_BACKEND_URL || 'http://localhost:8000';
   const fetchDashboardData = async () => {
     try {
       setLoading(true);
-      const response = await axios.get('${BACKEND}/api/dashboard');
+      const response = await axios.get(`${BACKEND}/api/dashboard`);
       setDashboardData(response.data);
       setError(null);
     } catch (err) {
@@ -28,7 +28,7 @@ const Dashboard = () => {
 
   const handleUpvote = async (category, text) => {
     try {
-      await axios.post('${BACKEND}/api/upvote', { category, text });
+      await axios.post(`${BACKEND}/api/upvote`, { category, text });
       // Refresh data after upvote
       fetchDashboardData();
     } catch (err) {

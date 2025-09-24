@@ -4,7 +4,7 @@ import { AlertTriangle, CheckCircle, TrendingUp, Users } from 'lucide-react';
 import VerificationForm from './components/VerificationForm';
 import Dashboard from './components/Dashboard';
 import ResultDisplay from './components/ResultDisplay';
-const BACKEND = import.meta.env.VITE_BACKEND_URL || 'http://localhost:8000';
+const BACKEND = process.env.VITE_BACKEND_URL || 'http://localhost:8000';
 function App() {
   const [activeTab, setActiveTab] = useState('verify');
   const [verificationResult, setVerificationResult] = useState(null);
@@ -14,7 +14,7 @@ function App() {
     setLoading(true);
     try {
       // Use absolute URL to backend API without proxy
-      const response = await axios.post('${BACKEND}/api/verify', { text });
+      const response = await axios.post(`${BACKEND}/api/verify`, { text });
       setVerificationResult(response.data);
     } catch (error) {
       console.error('Verification error:', error);
