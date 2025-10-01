@@ -11,7 +11,7 @@ const Dashboard = () => {
   useEffect(() => {
     fetchDashboardData();
   }, []);
-  const BACKEND = 'https://trinetra-ai-bend.onrender.com';
+  const BACKEND = 'https://trinetraai-backend.onrender.com';
   const fetchDashboardData = async () => {
     try {
       setLoading(true);
