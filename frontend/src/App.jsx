@@ -4,7 +4,7 @@ import { AlertTriangle, CheckCircle, TrendingUp, Users } from 'lucide-react';
 import VerificationForm from './components/VerificationForm';
 import Dashboard from './components/Dashboard';
 import ResultDisplay from './components/ResultDisplay';
-const BACKEND = 'https://trinetra-ai-bend.onrender.com';
+const BACKEND = 'https://trinetraai-backend.onrender.com';
 function App() {
   const [activeTab, setActiveTab] = useState('verify');
   const [verificationResult, setVerificationResult] = useState(null);
